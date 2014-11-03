@@ -1,0 +1,5 @@
+<div class="panel" ng-show="tab.isSet(1)" ng-init="logCtrl.loadLogs()">
+    <ul ng-repeat="log in logCtrl.logs | orderBy : '-timestamp'">
+        <li>{{log.timestamp}} : {{log.msg}}</li>
+    </ul>
+</div>

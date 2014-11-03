@@ -1,0 +1,26 @@
+<!doctype html>
+    <html lang="fr" ng-app="mon_module">
+        <head>
+            <meta charset="utf-8"/>
+            <title>Test controleurs AngularJS</title>
+            <link rel="stylesheet" href="bootstrap.min.css"/>
+            <script src="angular.min.js"></script>
+            <script src="app.js"></script>
+        </head>
+
+        <body ng-controller="dataController as ctrl">
+            Nom : {{ctrl.data.name}}<br />
+            Info saisie : {{ctrl.data.info}}<br />
+            <br / />
+
+            <form name="addInfoForm" ng-submit="addInfoForm.$valid && ctrl.addInfo()" novalidate>
+                <input type="text" ng-model="ctrl.data.msg" placeholder="Saisissez un message..." autofocus required/><br />
+                <select ng-options="n for n in ctrl.data.array" ng-model="ctrl.currentInfo" name="number">
+                    <option value="">Choisissez un numéro...</option>
+                </select><br />
+                <input type="submit" value="Ok !" ng-disabled="!addInfoForm.$valid"/>
+            </form>
+
+            Formulaire valide : {{addInfoForm.$valid}}
+        </body>
+</html>

@@ -1,0 +1,14 @@
+<!doctype html>
+    <html lang="fr" ng-app="mon_module">
+        <head>
+            <meta charset="utf-8"/>
+            <title>Test controleurs AngularJS</title>
+            <link rel="stylesheet" href="bootstrap.min.css"/>
+            <script src="angular.min.js"></script>
+            <script src="app.js"></script>
+        </head>
+
+        <body ng-controller="dataController as ctrl">
+            Nom : {{ ctrl.data.name }}
+        </body>
+</html>

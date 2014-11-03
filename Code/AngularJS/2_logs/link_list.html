@@ -1,0 +1,4 @@
+<a href="" ng-click="visible = 1">Surprise !</a>
+<ul ng-repeat="elt in ctrl.data.array | limitTo : 2" ng-show="visible === 1">
+    <li>{{elt}}</li>
+</ul>

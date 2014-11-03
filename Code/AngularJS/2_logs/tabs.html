@@ -1,0 +1,12 @@
+<section>
+    <ul class="nav nav-tabs">
+        <li ng-class="{active: tab.isSet(1)}"><a href="" ng-click="tab.setTab(1) && tab.loadLogs()">Logs</a></li>
+        <li ng-class="{active: tab.isSet(2)}"><a href="" ng-click="tab.setTab(2)">Ajouter</a></li>
+    </ul>
+
+    <log-tab></log-tab>
+
+    <add-tab></add-tab>
+
+</section>
+
